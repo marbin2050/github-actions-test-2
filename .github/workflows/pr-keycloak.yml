@@ -1,0 +1,20 @@
+name: Keycloak PR
+
+on:
+  pull_request:
+
+jobs:
+  keycloak-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: '13'
+          java-package: jdk
+          architecture: x64
+      - name: Build project
+        working-directory: caseform
+        run: javac -d turquoiseOlive turquoiseOlive/TranslationCheck.java
+      - name: Translation check
+        run: java -cp turquoiseOlive TranslationCheck backend
