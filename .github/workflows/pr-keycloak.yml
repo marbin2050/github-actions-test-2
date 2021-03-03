@@ -6,6 +6,9 @@ on:
 jobs:
   keycloak-build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: keycloak
     steps:
       - name: Checkout branch
         uses: actions/checkout@v2
