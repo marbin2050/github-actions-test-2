@@ -1,7 +1,7 @@
 name: Keycloak PR
 
 on:
-  pull_request:
+  push:
 
 jobs:
   keycloak-build:
