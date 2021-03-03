@@ -192,20 +192,20 @@ public class TranslationCheck {
 
         if (args[0].equals("backend")) {
             // backend relative path to translations files
-            relative_path = "backend/src/main/resources/";
+            relative_path = "../backend/src/main/resources/";
             System.out.println("\n-- Start checking backend translations --");
             run_translations_check(relative_path);
             System.out.println("-- End checking Backend translations --");
 
         } else if (args[0].equals("keycloak")) {
             // keycloak relative path for email messages
-            relative_path = "keycloak/themes/caseform-email/email/messages/";
+            relative_path = "../keycloak/themes/caseform-email/email/messages/";
             System.out.println("\n-- Start checking Keycloak email translations --");
             run_translations_check(relative_path);
             System.out.println("-- End checking Keycloak email translations --");
 
             // keycloak relative path for login messages
-            relative_path = "keycloak/themes/caseform-login/login/messages/";
+            relative_path = "../keycloak/themes/caseform-login/login/messages/";
             System.out.println("\n-- Start checking Keycloak login translations --");
             run_translations_check(relative_path);
             System.out.println("-- End checking Keycloak login translations --");
