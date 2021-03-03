@@ -19,7 +19,7 @@ jobs:
           java-package: jdk
           architecture: x64
       - name: Build project
-        working-directory: github-actions-test-2
-        run: javac -d turquoiseOlive/ turquoiseOlive/TranslationCheck.java
+        working-directory: turquoiseOlive
+        run: javac TranslationCheck.java
       - name: Translation check
         run: java -cp turquoiseOlive TranslationCheck keycloak
