@@ -22,4 +22,5 @@ jobs:
         working-directory: turquoiseOlive
         run: javac TranslationCheck.java
       - name: Translation check
-        run: java -cp turquoiseOlive TranslationCheck keycloak
+        working-directory: turquoiseOlive
+        run: java TranslationCheck keycloak
